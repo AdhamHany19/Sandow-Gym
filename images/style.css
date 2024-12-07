@@ -176,7 +176,7 @@ header .dropdown {
 /* end header */
 /* Start landing */
 .landing {
-  background-image: url(images/landing-01.png);
+  background-image: url(landing-01.png);
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -254,7 +254,7 @@ h3 {
 
 @media (max-width: 767px) {
   .landing {
-    background-image: url(images/smallscreenslanding.png);
+    background-image: url(smallscreenslanding.png);
     background-size: cover;
     background-position: top center;
   }
@@ -318,7 +318,7 @@ h3 {
 /* end landing */
 /* start video */
 .video {
-  background-image: url(images/videobg.jpg);
+  background-image: url(videobg.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -522,7 +522,7 @@ video {
 /* end Gallery */
 /* start Coachs */
 .trainers {
-  background-image: url("/images/coachsbg.jpg");
+  background-image: url("coachsbg.jpg");
   background-size: cover;
   background-position: center;
   position: relative; /* Ensure .overlay is positioned relative to .video */
