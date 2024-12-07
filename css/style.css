@@ -254,7 +254,7 @@ h3 {
 
 @media (max-width: 767px) {
   .landing {
-    background-image: url(/images/smallscreenslanding.png);
+    background-image: url(images/smallscreenslanding.jpg);
     background-size: cover;
     background-position: top center;
   }
