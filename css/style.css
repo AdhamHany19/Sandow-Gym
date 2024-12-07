@@ -176,7 +176,7 @@ header .dropdown {
 /* end header */
 /* Start landing */
 .landing {
-  background-image: url(landing-01.jpg);
+  background-image: url(/landing-01.png);
   background-size: cover;
   background-position: center;
   min-height: 100vh;
