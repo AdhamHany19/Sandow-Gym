@@ -176,7 +176,7 @@ header .dropdown {
 /* end header */
 /* Start landing */
 .landing {
-  background-image: url(images/landing-01.png);
+  background-image: url(/images/landing-01.png);
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -254,7 +254,7 @@ h3 {
 
 @media (max-width: 767px) {
   .landing {
-    background-image: url(images/smallscreenslanding.png);
+    background-image: url(/images/smallscreenslanding.png);
     background-size: cover;
     background-position: top center;
   }
@@ -318,7 +318,7 @@ h3 {
 /* end landing */
 /* start video */
 .video {
-  background-image: url(images/videobg.jpg);
+  background-image: url(/images/videobg.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -410,7 +410,7 @@ video {
 /* END video */
 /* Start Gallery */
 .gallery {
-  background-image: url(images/gallerybg.jpg);
+  background-image: url(/images/gallerybg.jpg);
   background-size: cover;
   position: relative;
 }
@@ -522,7 +522,7 @@ video {
 /* end Gallery */
 /* start Coachs */
 .trainers {
-  background-image: url("images/coachsbg.jpg");
+  background-image: url("/images/coachsbg.jpg");
   background-size: cover;
   background-position: center;
   position: relative; /* Ensure .overlay is positioned relative to .video */
@@ -777,6 +777,8 @@ video {
 
 .subs {
   font-family: "Baloo Bhaijaan 2", sans-serif;
+  position: relative; /* Makes it a positioned container for absolute elements */
+  overflow: hidden;   /* Prevents overflowing elements */
 }
 @media (max-width: 767px) {
   .subs .heading h2 {
@@ -787,10 +789,26 @@ video {
     width: 300px;
   }
   .subs .rectangle {
-    display: none;
+    z-index: 100;
+    height: 100%;
+    transform: skewx(-20deg);
+    /* position: absolute; */
+    width: 30%;
+    left: 100px;
+    top: 0px;
+    background: var(--yellow-color);
+    z-index: 1;
   }
   .subs .rectangle-two {
-    display: none;
+    z-index: 10;
+    height: 100%;
+    transform: skewx(-20deg);
+    position: absolute;
+    width: 30%;
+    right: 700px;
+    top: 0px;
+    background-color: var(--yellow-color);
+    opacity: 0.1;
   }
 }
 .subs .container {
@@ -1053,3 +1071,277 @@ video {
 
 /* end thirdbox */
 /* end Subs */
+/* Start Timing */
+.timing {
+  padding-top: 50px;
+  background-color: #231f20;
+  /* background-color: black; */
+  position: relative; /* Makes it a positioned container for absolute elements */
+  overflow: hidden;   /* Prevents overflowing elements */
+}
+.timing .container  {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Cairo", sans-serif;
+  margin-top: 10px;
+}
+.timing .heading h2 {
+  color: var(--yellow-color);
+  font-size: 90px;
+  font-family: "Khand", sans-serif;
+  text-transform: capitalize;
+  letter-spacing: 5px;
+  margin-bottom: -20px;
+}
+.timing .heading .line {
+  width: 500px;
+  height: 7px;
+  background-color: var(--yellow-color);
+}
+.timing .rectangle {
+  z-index: 100;
+  height: 100%;
+  transform: skewx(-20deg);
+  position: absolute;
+  width: 200px;
+  left: 100px;
+  top: 0px;
+  background: var(--yellow-color);
+  opacity: 0.1;
+  z-index: 1;
+}
+.timing .rectangle-two {
+  z-index: 10;
+  height: 100%;
+  transform: skewx(-20deg);
+  position: absolute;
+  width: 200px;
+  right: 300px;
+  top: 0px;
+  background-color: var(--yellow-color);
+  opacity: 0.1;
+}
+.timing .container .first-side {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.timing .container .first-side .kids-box {
+  background-color: black;
+  position: relative;
+  z-index: 999;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid var(--yellow-color);
+  /* padding: 10px; */
+  text-align: center
+  ;
+}
+.timing .container .first-side .body-box {
+  background-color: black;
+  position: relative;
+  z-index: 999;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid var(--yellow-color);
+  padding: 10px;
+}
+.timing .kids-box .head {
+  padding-bottom: 7px;
+  text-align: center;
+  background-color: var(--yellow-color);
+  width: 100%;
+}
+.timing .name {
+  color: white;
+  font-family: "Cairo", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.timing .time {
+  color: var(--yellow-color);
+  font-family: "Cairo", sans-serif;
+  font-weight: 700;
+}
+.timing .container .second-box{
+  background-color: black;
+  position: relative;
+  z-index: 999;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  border-radius: 5px;
+  border: 2px solid var(--yellow-color);
+  /* padding: 10px; */
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .timing .container {
+    gap: 15px;
+    flex-direction: column;
+  }
+  .timing .rectangle {
+    z-index: 100;
+    height: 100%;
+    transform: skewx(-20deg);
+    /* position: absolute; */
+    width: 30%;
+    left: 100px;
+    top: 0px;
+    background: var(--yellow-color);
+    z-index: 1;
+  }
+  .timing .rectangle-two {
+    z-index: 10;
+    height: 100%;
+    transform: skewx(-20deg);
+    position: absolute;
+    width: 30%;
+    right: 700px;
+    top: 0px;
+    background-color: var(--yellow-color);
+    opacity: 0.1;
+  }
+  .timing .heading h2 {
+    font-size: 40px;
+  }
+  .timing .heading .line {
+    margin-top: 10px;
+    width: 300px;
+  }
+  .timing .container .first-side{
+    width: 90%;
+  }
+  .timing .container .second-box{
+    width: 90%;
+  }
+}
+/* End Timing */
+/* start location */
+.location{
+  padding-top: 50px;
+  background-color: #231f20;
+  /* background-color: black; */
+  position: relative; /* Makes it a positioned container for absolute elements */
+  overflow: hidden;   
+
+}
+.location .container{
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.location .heading h2 {
+  color: var(--yellow-color);
+  font-size: 90px;
+  font-family: "Khand", sans-serif;
+  text-transform: capitalize;
+  letter-spacing: 5px;
+  margin-bottom: -20px;
+}
+.location .heading .line {
+  width: 500px;
+  height: 7px;
+  background-color: var(--yellow-color);
+}
+@media (max-width: 767px) {
+  .location .heading .line{
+    width: 300px;
+  }
+}
+.location .map{
+  margin-top: 30px;
+  border: 3px solid var(--yellow-color);
+width: 100%;
+height: 600px;
+margin-bottom: 20px;
+}
+.location .link{
+  
+  background-color:var(--yellow-color);
+  font-family: "Khand", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 25px;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.location .link  a{
+  text-decoration: none ;
+color: black;
+}
+/* End location */
+/* Start foter */
+footer{
+  background-color: #231f20;
+
+}
+footer h3{
+  font-size: 40px;
+}
+footer .msg{
+  background-color: var(--yellow-color);
+  padding: 5px;
+
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+footer .icons{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+justify-content: flex-start;
+
+padding-bottom: -100px;
+}
+@media (max-width: 767px){
+  footer .contact{
+
+  align-items: center;
+
+  }
+}
+footer .icons i {
+  font-size: 50px;
+  color: white;
+}
+.contact{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.seperate{
+  width: 120px;
+  height: 3px;
+  background-color: white;
+  margin-top: 10px;
+
+}
+.phone{
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  gap: 5px;
+  border: 2px solid var(--yellow-color);
+  width: 150px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+border-radius: 5px;
+background-color:#fff20094;
+}
+.phone p{
+  font-size: 20px;
+
+
+}
+/* Start foter */
