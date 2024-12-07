@@ -50,6 +50,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 999;
+  background-color: rgba(0, 0, 0, 0.486);
 }
 header .container {
   display: flex;
@@ -958,7 +959,7 @@ video {
   justify-content: space-between;
   flex-direction: row-reverse;
   padding: 6px;
-  border-radius: 12px;
+  border-radius: 17px;
   margin-top: 20px;
   font-weight: 700;
   background-color: var(--yellow-color);
@@ -1036,7 +1037,7 @@ video {
   display: flex;
   flex-direction: row-reverse;
   margin-top: 10px;
-  border-radius: 12px;
+  border-radius: 17px;
   align-items: center;
   justify-content: space-between;
   padding: 6px;
@@ -1049,7 +1050,7 @@ video {
   display: flex;
   flex-direction: row-reverse;
   margin-top: 10px;
-  border-radius: 12px;
+  border-radius: 17px;
   word-spacing: 7px;
   gap: 20px;
   padding: 6px;
